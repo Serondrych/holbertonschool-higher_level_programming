@@ -6,7 +6,7 @@ class Square:
     """Size private attribute"""
     def __init__(self, size=0):
         if not isinstance(size, int):
-            raiseTypeError("size must be an integer")
+            raise TypeError("size must be an integer")
         elif size < 0:
-            raiseValueError("size must be >= 0")
+            raise ValueError("size must be >= 0")
         self.__size = size
