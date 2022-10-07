@@ -24,6 +24,10 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    def __init__ (self, position=(0, 0)):
+        """Initialize the position"""
+        self.__position = position
+
     @property
     def position(self):
         """Retrieve the position"""
@@ -50,10 +54,10 @@ class Square:
             print()
             return
         else: 
-            for i in range(0, self.__positin[1]):
+            for i in range(0, self.__position):
                 print()
             for j in range(0, self.__size):
-                for h in range(0, self.__position[0]):
+                for h in range(0, self.__position):
                     print(" ", end="")
                 for i in range(0, self.__size):
                     print("#", end="")
